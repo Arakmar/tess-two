@@ -448,7 +448,7 @@ bool TessPDFRenderer::fileToPDFObj(char *filename, long int objnum,
         filter = "/DCTDecode";
         break;
     case IFF_JP2:
-        freadHeaderJp2k(fp, &w, &h, &spp);
+        freadHeaderJp2k(fp, &w, &h, 0, &spp);
         filter = "/JPXDecode";
         break;
     default:
